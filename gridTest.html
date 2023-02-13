@@ -10,29 +10,62 @@
 
         .container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr 2fr);
-            gap: 10px;
-            grid-template-rows: 200px 400px;
+            width: 90%;
+            margin: auto;
+            margin-top: 150px;
+            grid-template-columns: 30px repeat(7, 1fr);
+            grid-template-rows: 70px 400px 1fr;
+            grid-template-areas: 
+            "hd hd hd hd hd hd hd hd"
+            "sd sd main main main main main main"
+            "ft ft ft ft ft ft ft ft";
         }
 
-        div {
+        .box {
             border: 1px solid red;
+            background: #F8FA90;
         }
+
+        .header {
+            grid-area: hd;
+        }
+
+        .sidebar{
+            grid-area: sd;
+        }
+
+        .content {
+            grid-area: main;
+            background-image: url('/photos/women\ lilac\ bag.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .content img {
+            height: 400px;
+            width: auto;
+        }
+
+        .footer {
+            grid-area: ft;
+        }
+    
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
+       <div class="header box">
+        <h1> The Beauty of Nature brings us Home</h1>
+       </div>
+       <div class="sidebar box">
+        <h1>Blog Post</h1>
+        <a href="#blank"> Most Recent Post </a>
+       </div>
+       <div class="content box">
+        <img src="photos/women lilac bag.jpg" alt="bagImage">
+       </div>
+       <div class="footer box"> Footer </div>
     </div>
 </body>
 
