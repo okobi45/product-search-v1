@@ -13,12 +13,8 @@
             width: 90%;
             margin: auto;
             margin-top: 150px;
-            grid-template-columns: 30px repeat(7, 1fr);
-            grid-template-rows: 70px 400px 1fr;
-            grid-template-areas: 
-            "hd hd hd hd hd hd hd hd"
-            "sd sd main main main main main main"
-            "ft ft ft ft ft ft ft ft";
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 40px 200px 40px;
         }
 
         .box {
@@ -27,27 +23,20 @@
         }
 
         .header {
-            grid-area: hd;
+            grid-column: 1 / -1;
         }
 
         .sidebar{
-            grid-area: sd;
+            
         }
 
         .content {
-            grid-area: main;
-            background-image: url('/photos/women\ lilac\ bag.jpg');
-            background-size: contain;
-            background-repeat: no-repeat;
+            grid-column: ;
         }
 
-        .content img {
-            height: 400px;
-            width: auto;
-        }
 
         .footer {
-            grid-area: ft;
+            grid-column: 1 / -1;
         }
     
     </style>
@@ -56,14 +45,14 @@
 <body>
     <div class="container">
        <div class="header box">
-        <h1> The Beauty of Nature brings us Home</h1>
+        <h1> This is Awesome</h1>
        </div>
        <div class="sidebar box">
         <h1>Blog Post</h1>
         <a href="#blank"> Most Recent Post </a>
        </div>
        <div class="content box">
-        <img src="photos/women lilac bag.jpg" alt="bagImage">
+        <!-- <img src="photos/women lilac bag.jpg" alt="bagImage"> -->
        </div>
        <div class="footer box"> Footer </div>
     </div>
